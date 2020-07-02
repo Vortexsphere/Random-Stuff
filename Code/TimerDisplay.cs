@@ -43,7 +43,7 @@ public class TimerDisplay : MonoBehaviour
         // IMPORTANT: Setting the rect transform parameters must be done AFTER setting the parent
         // otherwise things will get readjusted.
         RectTransform rt = _timer.rectTransform;
-	// Anchor text in the bottom left corner, slightly shifted to the right.
+        // Anchor text in the bottom left corner, slightly shifted to the right.
         rt.anchorMin = new Vector2(0.005f, 0f);
         rt.anchorMax = new Vector2(0.005f, 0f);
         rt.pivot = new Vector2(0f, 0f);
@@ -81,7 +81,7 @@ public class TimerDisplay : MonoBehaviour
         }
 
         // Double precision required for lowest timescales to ensure the value
-	// doesn't round to 0.
+        // doesn't round to 0.
         _timeFactor = _timeFactorInt / 1000f;
         _elapsedSeconds += (double)Time.unscaledDeltaTime * _timeFactor;
         if (_elapsedSeconds >= MAX_SECONDS) _elapsedSeconds = 0f; // Reset (simple option).
